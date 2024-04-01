@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>Shop điện thoại</title>
+
+    <style>
+        nav{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+        background-color: #4d4d4d;
+        position: sticky;
+        }
+        nav ul{
+            width: 100%;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav li{
+            height: 50px;
+        }
+
+        nav a{
+            height: 100%;
+            padding: 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        nav a:hover{
+            background-color: gray;
+            color: white;
+            text-decoration: none;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 30px;
+            height: 36px;
+            width: fit-content;
+        }
+        nav li:first-child{
+            margin-right: auto;
+        }
+        ul li img{
+            width: fit-content;
+            height: 70px;
+        }
+        .top
+        {
+            line-height: 64px;
+            text-align: center;
+            word-spacing: 30px;
+            font-size: 15px;
+            font-family: arial;
+            position: sticky;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        .row{
+            text-align: center;
+        }
+        .right{
+            text-align: left;
+        }
+        .dl
+        {
+            border-radius: 8px;
+            height: 38px;
+            width: 73.8px;
+            margin: 5px;
+            border: 0.5px solid #999999;
+            background-color: #FFFFFF;
+        }
+        .dl:focus{
+            outline: 2px solid #0066cc;
+        }
+        .color{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .color:focus{ outline: 2px solid #515154;}
+
+        .sale {
+        width: 550px; /* Độ rộng 700px */
+        height: 350px; /* Chiều cao 450px */
+        border-radius: 10px;
+        border: 2px solid #D2D2D7; /* Viền kẻ đen 2px */
+        }
+        .sale p{
+            margin: 10px;
+            padding-top: 1px;
+            padding-left: 20px;
+            font-size: 15px;
+        }
+        .hr{
+            border: 0.5px;
+            border-style: solid;
+            border-color: #D2D2D7;
+            width: 550px;
+        }
+        .buy{
+            width: 550px;
+            height: 70px;
+            border-radius: 12px;
+            border: hidden;
+            background-color: #0066CC;
+        }
+        .buy-container{
+            display: flex;
+        }
+        .buy1{
+            flex: 1;
+            padding: 10px;
+            border: 2px #0066CC solid;
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 10px;
+            height: 60px;
+        }.buy1:last-child{margin-right: 0;}
+
+        .in4{
+            width: 550px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #D2D2D7; 
+            margin-top: 15px
+        }
+        .in4 p{
+            margin: 10px;
+            padding-left: 5px;
+            font-size: 15px;
+            font-size: 13px;
+        }
+        .phukien{
+            width: 260px;
+            height: 350px;
+            border-radius: 10px;
+            border: 1px solid #D2D2D7; 
+            background-color: #FFFFFF;
+            padding-top: 20px; 
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .phukien img{
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        .km{
+            margin-top: 100px;
+            padding-top: 50px;
+            width: 100%;
+            height: 250px;
+            background-color: #F2F2F2;
+        }  
+        .km1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="email"] {
+        padding: 8px;
+        width: 450px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        margin-top: 30px;
+        }
+
+        footer{
+            border: 1px solid black;
+            background-color: #4d4d4d;
+        }
+        .footer{
+            padding-left: 16rem;
+            color: white;
+        }
+
+        .footer a{
+            color: white;
+        }
+
+        .logo-web img{
+            width: fit-content;
+            height: 70px;
+        }
+
+
+
+
+       
+
+    </style>
+
+</head>
+<body>  
+
+    <nav>
+        <ul class="">
+            <li class="category-item">
+                <a href=""><img src="https://static.vecteezy.com/system/resources/thumbnails/020/489/292/small_2x/3d-logo-of-apple-iphone-free-png.png" alt=""></a>
+            </li>
+            <form action="">
+                <input type="text" placeholder="Tìm kiếm">
+            </form>
+            <li class="category-item">
+                <a href="#">iPhone</a>
+            </li>
+            <li class="category-item">
+                <a href="#">iPad</a>
+            </li>
+            <li class="category-item">
+                <a href="#">Mac</a>
+            </li>
+            <li class="category-item">
+                <a href="#">Dịch vụ</a>
+            </li>
+            <li class="category-item">
+                <a href="#">Liên hệ</a>
+            </li>
+            <li class="category-item">
+                <a href="#">Đăng nhập/Đăng ký</a>
+            </li>
+        </ul>
+    </nav>
+
+
+<!-----------------------hân trang--------------------------->
+<div class="container">
+    <div>
+        <div  style="margin-top: 15px;">
+            
+            <a href="" style="color: #515154;"> Trang chủ &nbsp; <i class="fas fa-angle-right"></i></a>&nbsp;
+            <a href="" style="color: #515154;"> iPhone  &nbsp;<i class="fas fa-angle-right"></i></a>&nbsp;
+            <a href=""style="color: #515154;"> iPhone 15 series  &nbsp;<i class="fas fa-angle-right"></i></a>&nbsp;
+            <a href=""style="color: #515154;"> iPhone 15 Pro Max  </a>
+            
+        </div>
+    </div>
+
+    <div class="row">
+        <!---bên trái-->
+        
+        <div class="col-sm-6 left" >
+            <div class="left" style="margin-top: 15px;">
+                <img id="iphone" src="https://shopdunk.com/images/thumbs/0019715_iphone-15-pro-1tb_550.jpeg" alt="iphone" style="background-color: #F5F5F7; border-radius: 10px;">
+            </div>  
+            slide lật 
+        </div>
+
+        <!---bên phải-->
+    
+        <div class="col-sm-6 right">
+            
+            <div class="right" style="margin-left: 10px;">
+                <div style="font-size: 24px; font-family: Arial ; margin-top: 20px;" >iPhone 15 Pro Max</div><p></p>
+                <i class="fas fa-star" style="color: orange"></i><i class="fas fa-star" style="color: orange"></i><i class="fas fa-star" style="color: orange"></i><i class="fas fa-star" style="color: orange"></i><i class="fas fa-star" style="color: orange"> &nbsp;</i><a href="" style="color: #0066CC;">10 Đánh giá</a><p></p>
+                <hr class="hr">
+                <span id="price" class="value" style="color: #0066cc; font-size: 24px ; font-family: arial;"><strong>30.450.000₫</strong> &nbsp; <span style="text-decoration: line-through; font-size: 18px; font-family: arial; color: #999999;">49.990.000₫</span></span><p></p>
+                
+                Dung lượng <p></p>
+                <div>
+                    <button class="dl" onclick="changePrice(0)">256 GB</button>
+                    <button class="dl" onclick="changePrice(1)">512 GB</button>
+                    <button class="dl" onclick="changePrice(2)">1 TB</button><p></p><p></p>
+                </div>
+                Màu sắc <p></p>
+                <div >
+                    <button class="color" style="background-color: #C0BDB1" onclick="changeImg(0)" ></button>
+                    <button class="color" style="background-color: #505153" onclick="changeImg(1)"></button>
+                    <button class="color" style="background-color: #505864" onclick="changeImg(2)"></button>
+                    <button class="color" style="background-color: #F3F2ED" onclick="changeImg(3)"></button>
+                   
+                </div>
+                <p></p>
+                <!-----Ưu đãi----->
+                <div class="sale" style="white-space: normal; padding: 10px; padding-left: 20px;">
+                    <b style="font-size: 20px;"><i ></i>&nbsp;<i class="fas fa-gift"></i> Ưu đãi</b>   
+                    <p style="color: red;"><strong>I.Ưu đãi trả góp</strong></p>
+                    <p> <i  style="color: lightgreen;"></i> Ưu đãi tới <strong>500.000đ</strong> khi trả góp</p>
+                    <p style="color: red;"><strong>II.Ưu đãi mua kèm</strong></p>
+                    <p>Tặng phụ kiện khi mua kèm</p>
+                    <p><i class="far fa-check-circle" style="color: lightgreen;"></i>Giảm thêm 300.000đ khi mua kèm Apple Watch</p>
+                    <p><i class="far fa-check-circle" style="color: lightgreen;"></i>Giảm 10% khi mua kèm gói bảo hành tiêu chuẩn</p>
+                    <p><i class="far fa-check-circle" style="color: lightgreen;"></i>Giảm 20% khi mua kèm gói bảo hành kim cương(Rơi vỡ, Vào nước)</p>
+                    <p style="color: red;"><strong>III.Ưu đãi lên dời</strong></p>
+                    <p>Trợ giá lên đời lên tới <strong>800.000đ</strong></p>
+                </div><p></p>
+                
+                <!---nút mua hàng--->
+                <button class="buy" style="color: white; font-size: 17px;"> <strong>MUA NGAY</strong></button>
+                <div class="buy-container">
+                    <button class="buy1" style="color: #0066CC;font-size: 17px;"><strong>Trả góp</strong></button>
+                    <button class="buy1" style="color: #0066CC; font-size: 17px;" ><strong>Thu cũ đổi mới</strong></button>
+                </div>
+                <!------>
+                <div class="in4"><p></p>
+                    <p><i class="far fa-check-circle" style="color:#0066CC "></i> Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Que lấy sim, Cáp type C - Lightning.</p>
+                    <p><i class="far fa-check-circle" style="color:#0066CC "></i> Bảo hành chính hãng 1 năm  </p>
+                    <p><i class="far fa-check-circle" style="color:#0066CC "></i> Giao hàng nhanh toàn quốc</p>
+                    <p><i class="far fa-check-circle" style="color:#0066CC "></i> Hoàn thuế cho người nước ngoài</p>
+                    <p><i class="far fa-check-circle" style="color:#0066CC "></i> Gọi đặt mua <a href="">1900.1234</a>  (8:00 - 22:00)</p>
+                </div>
+            </div>
+        </div>
+    </div><p></p>
+    <p style="font-size: 30px;"><strong>Gợi ý phụ kiện đi kèm</strong></p>
+    <div class="phukien">
+        <a href="" ><img src="https://shopdunk.com/images/thumbs/0001395_sac-20w-usb-c-power-adapter_240.png" alt=""> <strong style="text-align: center; padding-left: 20px; font-size: 18px; ">Sạc 20W Chính Hãng &nbsp;<p></p></strong><span style="color: #0066CC;padding-left: 20px; font-size: 15px;"><strong>490.900đ</strong></span></a> &nbsp;<span style="text-decoration: line-through; color: #999999;">690.000đ</span>
+    </div>
+    <div class="phukien">
+        <a href="" ><img src="https://shopdunk.com/images/thumbs/0004728_mieng-dan-cuong-luc-jcpal-preserver-iphone-13-13-pro-max-14plus_240.webp" alt=""> <strong style="text-align: center; padding-left: 20px; font-size: 18px;">Sạc 20W Chính Hãng &nbsp;<p></p></strong><span style="color: #0066CC;padding-left: 20px; font-size: 15px;"><strong>220.000đ</strong></span></a> &nbsp;<span style="text-decoration: line-through; color: #999999;">390.000đ</span>
+    </div>
+    <div class="phukien">
+        <a href="" ><img src="https://shopdunk.com/images/thumbs/0011250_applecare-for-iphone-13_240.png" alt=""> <strong style="text-align: center; padding-left: 20px; font-size: 18px;">Gói bảo hành Apple + &nbsp;<p></p></strong><span style="color: #0066CC;padding-left: 20px; font-size: 15px;"><strong>4590.000đ</strong></span></a> &nbsp;<span style="text-decoration: line-through; color: #999999;">4990.000đ</span>
+    </div>
+    <div class="phukien">
+        <a href="" ><img src="https://shopdunk.com/images/thumbs/0010745_cap-sac-usb-c-to-lightning-cable-1m-fae_240.png" alt=""> <strong style="text-align: center; padding-left: 20px; font-size: 18px;">Cáp USB-C to Lightning &nbsp;<p></p></strong><span style="color: #0066CC;padding-left: 20px; font-size: 15px;"><strong>390.000đ</strong></span></a> &nbsp;<span style="text-decoration: line-through; color: #999999;">490.000đ</span>
+    </div>
+
+</div>
+<div style="background-color: #1D1D1F;">
+    <div style="background-color: black; width: 100%; height: 1000px; text-align: center;">
+        <div style="justify-content: center; display: flex; align-items: center; margin-top: 200px;">
+            <img src="https://shopdunk.com/images/uploaded-source/compareiphone15pro/hero_titanium_large.png?1693931127317" alt="">
+        </div>
+        <div style="justify-content: center; display: flex; align-items: center; margin-top: 200px;">
+            <img src="https://shopdunk.com/images/uploaded-source/compareiphone15pro/hero_logo_large.png?1693931127319" alt="">
+        </div>
+        <div style="justify-content: center; display: flex; align-items: center; margin-top: 20px;">
+            <img src="https://shopdunk.com/images/uploaded-source/compareiphone15pro/hero_large.png?1694017832266" alt="">
+        </div>
+    </div>
+    
+    <div style="width: 950px; height: 600px; background-color: black; border-radius: 20px; padding-top: 50px;margin: 0 auto; ; text-align: center; margin-top: 100px;border-radius: 20px;">
+        <p style="text-align: center; font-size: 40px;color: white;">A17 Pro.</p>
+        <p style="text-align: center; font-size: 40px;color: white;">Chip thay đổi cuộc chơi</p>
+        <p style="text-align: center; font-size: 40px;color: white;">Hiệu năng chấn động địa cầu</p>
+        <div style="margin-top: 50px">
+            <img src="https://shopdunk.com/images/uploaded-source/compareiphone15pro/chip_large.png?1694017832268" alt="">
+        </div>
+    </div>
+    
+    <div style="width: 950px; height: 520px; background-color: black; border-radius: 20px; padding-top: 50px; margin: 0 auto; text-align: center; margin-top: 100px;">
+        <p style="text-align: left;font-size: 40px; padding-left: 50px;  color: white; "><strong>Dynamic Island đưa </strong></p>
+        <p style="text-align: left;font-size: 40px; padding-left: 50px; color: white;"><strong>thông tin quang trọng </strong></p>
+        <p style="text-align: left;font-size: 40px; padding-left: 50px;color: white;"><strong>lên đầu </strong></p>
+        <div style="text-align: right; margin-top: -205px; margin-right: 50px;"><img src="https://shopdunk.com/images/uploaded-source/compareiphone15/dynamic_island_large.png?1694035518950" alt=""></div>
+    </div>
+</div>
+
+
+
+<!----Phần cuối trang--->
+<div class="km" >
+    <p style="text-align: center; font-size: 24px; padding-top: 20px;"><strong>Đăng ký nhận thông tin từ Apple</strong></p>
+    <p style="text-align: center;">Thông tin sản phẩm mới nhất và chương trình khuyến mãi</p>
+    <div class="km1" >
+        <input type="email" placeholder="Nhập email của bạn">
+        <button type="submit" style="padding: 8px 16px; background-color: #007bff;color: white;border: 1px solid #ccc;cursor: pointer;margin-left: -50px;border-radius: 30px;margin-top: 30px;">Đăng ký</button>
+    </div>
+</div>
+<footer>
+    <div class="footer">
+        <div class="footer-upper">
+            <div class="logo-web">
+                <a href=""><img src="https://static.vecteezy.com/system/resources/thumbnails/020/489/292/small_2x/3d-logo-of-apple-iphone-free-png.png" alt=""></a>
+            </div>
+           <div class="footer-p">
+            <h5>Trang web là sản phẩm của nhóm 2</h5>
+            <p>Trang web được thực hiện bởi Đinh Lê Hoàng Sơn , Ngô Quang Việt , Hoàng Thanh Phong</p>
+           </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!----------------SCRIPT----------------->
+<script>
+    var images = ['https://shopdunk.com/images/thumbs/0019715_iphone-15-pro-1tb_550.jpeg', 'https://shopdunk.com/images/thumbs/0019745_iphone-15-pro-1tb_550.jpeg', 'https://shopdunk.com/images/thumbs/0019725_iphone-15-pro-1tb_550.jpeg', 'https://shopdunk.com/images/thumbs/0019735_iphone-15-pro-1tb_550.jpeg'];
+        
+    function changeImg(index) {
+        var img = document.getElementById('iphone');
+        img.src = images[index];
+    }
+
+    var prices = ['30.450.000₫', '37.950.000₫', '43.950.000₫'];
+        
+    function changePrice(index) {
+        var priceElement = document.getElementById('price');
+        priceElement.innerHTML = ''; // Xóa nội dung cũ
+
+        var formattedPrice = document.createElement('strong');
+        formattedPrice.textContent = prices[index];
+        priceElement.appendChild(formattedPrice);
+
+        var discountElement = document.createElement('span');
+        discountElement.innerHTML = '&nbsp <span style="text-decoration: line-through; font-size: 18px; font-family: arial; color: #999999;">46.990.000₫</span>';
+        priceElement.appendChild(discountElement);
+    }
+
+</script>
+
+
+</body>
+</html>
